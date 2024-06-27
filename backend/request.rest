@@ -1,0 +1,42 @@
+//home
+GET http://localhost:35555/inventaris
+
+//cari
+###
+GET http://localhost:35555/inventaris/667db072516bd2474902f888
+
+//hapus
+###
+DELETE http://localhost:35555/inventaris/667db072516bd2474902f888
+
+//tambah
+###
+POST http://localhost:35555/inventaris/
+Content-Type: application/json
+
+{
+    "nama": "mobil",
+    "merk": "mainan", 
+    "kondisi": "rusak", 
+    "tempat": "Lab 2", 
+    "tanggalBeli": "123123", 
+    "serialnumber": "595955",
+    "diperoleh": "RKAS", 
+    "status": "ada"
+}
+
+//Perbaharui data
+###
+PATCH http://localhost:35555/inventaris/667db072516bd2474902f888
+Content-Type: application/json
+
+{
+    "nama": "bangku",
+    "merk": "kosong", 
+    "kondisi": "baik", 
+    "tempat": "Lab 1", 
+    "tanggalBeli": "123123", 
+    "serialnumber": "12224",
+    "diperoleh": "mencuri", 
+    "status": "hilang"
+}

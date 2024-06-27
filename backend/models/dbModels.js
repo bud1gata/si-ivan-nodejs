@@ -22,8 +22,8 @@ const inventSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    serialNumber: {
-        type: String,
+    serialnumber: {
+        type: Number,
         required: true
     },
     diperoleh: {
