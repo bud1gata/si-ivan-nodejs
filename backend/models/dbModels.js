@@ -30,9 +30,13 @@ const inventSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    status: {
+        type: String,
+        required: true
+    },
 },
 {
-    timestamps: true,
+    Timestamp: true,
 }
 );
 

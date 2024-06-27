@@ -1,12 +1,13 @@
 import express, { request, response } from "express";
 import cors from "cors";
-import { PORT, mongoDBURL } from "./config/config.js" 
+import { PORT, mongoDBURL } from "./config/config.js"; 
 import mongoose from "mongoose";
-import { Inventaris } from "./models/dbModels.js"
+import inventRoute from "./routes/inventRoute.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(inventRoute);
 
 mongoose
     .connect(mongoDBURL)
