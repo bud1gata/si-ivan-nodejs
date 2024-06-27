@@ -8,7 +8,7 @@ const app = express();
 mongoose
     .connect(mongoDBURL)
     .then(() => {
-        console.log('Backend terkoneksi ke database.');
+        console.log('Server Backend hidup dan terkoneksi ke Server database.');
         app.listen(PORT, () => {
             console.log(`Aplikasi berjalan pada port: ${PORT}`);
         });
