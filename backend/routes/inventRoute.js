@@ -1,5 +1,11 @@
 import express from "express";
-import {createInventaris, deleteInventaris, getInventaris, getInventarisById, updateInventaris} from "../controllers/inventController.js"
+import {
+    createInventaris, 
+    deleteInventaris, 
+    getInventaris, 
+    getInventarisById, 
+    updateInventaris
+} from "../controllers/inventController.js"
 
 const router = express.Router();
 
