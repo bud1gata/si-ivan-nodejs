@@ -1,10 +1,10 @@
 import express from "express";
-import {createInventaris, deleteInventaris, getInventaris, getInventarisBySerial, updateInventaris} from "../controllers/inventController.js"
+import {createInventaris, deleteInventaris, getInventaris, getInventarisById, updateInventaris} from "../controllers/inventController.js"
 
 const router = express.Router();
 
 router.get('/inventaris', getInventaris);
-router.get('/inventaris/:id', getInventarisBySerial);
+router.get('/inventaris/:serialnumber', getInventarisById);
 router.post('/inventaris', createInventaris);
 router.patch('/inventaris/:id', updateInventaris);
 router.delete('/inventaris/:id', deleteInventaris);

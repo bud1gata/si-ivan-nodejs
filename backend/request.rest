@@ -3,11 +3,11 @@ GET http://localhost:35555/inventaris
 
 //cari
 ###
-GET http://localhost:35555/inventaris/667db072516bd2474902f888
+GET http://localhost:35555/inventaris/12224
 
 //hapus
 ###
-DELETE http://localhost:35555/inventaris/667db072516bd2474902f888
+DELETE http://localhost:35555/inventaris/667db14cc1b2514b46cc094a
 
 //tambah
 ###
@@ -27,7 +27,7 @@ Content-Type: application/json
 
 //Perbaharui data
 ###
-PATCH http://localhost:35555/inventaris/667db072516bd2474902f888
+PATCH http://localhost:35555/inventaris/667db72aaa01aeb365070966
 Content-Type: application/json
 
 {
