@@ -40,3 +40,19 @@ Content-Type: application/json
     "diperoleh": "mencuri", 
     "status": "hilang"
 }
+
+//tambah 2
+###
+POST http://localhost:35555/inventaris/
+Content-Type: application/json
+
+{
+    "nama": "meja",
+    "merk": "kayu", 
+    "kondisi": "rusak", 
+    "tempat": "Lab 1", 
+    "tanggalBeli": "123123323", 
+    "serialnumber": "12311111",
+    "diperoleh": "RKAS", 
+    "status": "ada"
+}
