@@ -22,7 +22,7 @@ export const getInventarisById= async(req, res) => {
         const {serialnumber} = req.params;
         const response = await Inventaris.find({serialnumber});
         if (response.length == 0) {
-            return response.status(404).json({message: `Data berdasarkan Serial Number tersebut tidak ditemukan.`});
+            return res.status(404).json({message: `Data berdasarkan Serial Number tersebut tidak ditemukan.`});
         }
         return res.status(200).json(response);
     } catch (error) {

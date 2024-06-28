@@ -15,7 +15,7 @@ import verifyToken from "../middleware/verifyToken.js"
 const router = express.Router();
 
 router.get('/inventaris', verifyToken, getInventaris);
-router.get('/inventaris/:serialnumber', verifyToken, getInventarisById);
+router.get('/inventaris/:serialnumber',getInventarisById);
 router.post('/inventaris', verifyToken, createInventaris);
 router.patch('/inventaris/:id', verifyToken, updateInventaris);
 router.delete('/inventaris/:id', verifyToken, deleteInventaris);

@@ -19,11 +19,11 @@ const inventSchema = mongoose.Schema({
         required: true
     },
     tanggalBeli: {
-        type: Number,
+        type: String,
         required: true
     },
     serialnumber: {
-        type: Number,
+        type: String,
         required: true
     },
     diperoleh: {
