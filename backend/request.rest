@@ -56,3 +56,15 @@ Content-Type: application/json
     "diperoleh": "RKAS", 
     "status": "ada"
 }
+
+//register user
+###
+POST http://localhost:35555/register
+Content-Type: application/json
+
+{
+    "name": "budi",
+    "nbm": "10101010", 
+    "password": "masukinaja", 
+    "role": "superuser"
+}

@@ -1,8 +1,8 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import { auth } from "../models/authModel";
-import 'dotenv/config.js';
+import { auth } from "../models/authModel.js";
+import 'dotenv';
 
 export const intLogin = async(req, res) => {
 
