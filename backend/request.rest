@@ -81,3 +81,4 @@ Content-Type: application/json
     "password": "masukinaja"
 }
 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYnVkaSIsIm5ibSI6IjEwMTAxMDEwIiwicm9sZSI6InN1cGVydXNlciIsImlhdCI6MTcxOTYwNTY0MCwiZXhwIjoxNzE5NjkyMDQwfQ.Uvk0QlE7gg_6iMjH1ZnsfDvPny8caAmMp0t6joYxMD8
