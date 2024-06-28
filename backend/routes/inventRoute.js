@@ -6,7 +6,10 @@ import {
     getInventarisById, 
     updateInventaris
 } from "../controllers/inventController.js"
-import { intLogin, intRegister } from "../controllers/authController.js";
+import { 
+    intLogin, 
+    intRegister 
+} from "../controllers/authController.js";
 
 const router = express.Router();
 
