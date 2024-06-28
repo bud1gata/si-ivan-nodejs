@@ -1,6 +1,8 @@
 //home
 GET http://localhost:35555/inventaris
-
+{ 
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYnVkaSIsIm5ibSI6IjEwMTAxMDEwIiwicm9sZSI6InN1cGVydXNlciIsImlhdCI6MTcxOTYwMDczMSwiZXhwIjoxNzE5Njg3MTMxfQ.bXRJT_YXkBhqmT-IhRtz_vZ5c9mvyArEqcjkuwoE0Yk"
+}
 //cari
 ###
 GET http://localhost:35555/inventaris/28442
@@ -68,3 +70,14 @@ Content-Type: application/json
     "password": "masukinaja", 
     "role": "superuser"
 }
+
+//login user
+###
+POST http://localhost:35555/login
+Content-Type: application/json
+
+{
+    "nbm": "10101010", 
+    "password": "masukinaja"
+}
+
