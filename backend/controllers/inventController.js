@@ -1,5 +1,6 @@
 import { response } from "express";
 import {Inventaris} from "../models/dbModels.js";
+import mongoose from "mongoose";
 
 //Ambil semua data
 export const getInventaris = async(req, res) => {
@@ -118,14 +119,31 @@ export const createInventaris = async (req, res) => {
 
 
 //hapus data
-export const deleteInventaris = async(req, res) => {
+export const deleteInventaris = async (req, res) => {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
+
+        // Validate that id is provided and is a valid MongoDB ObjectId
+        if (!id || !mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).send({
+                message: 'Invalid ID',
+            });
+        }
+
+        // Attempt to delete the document
         const response = await Inventaris.findByIdAndDelete(id);
-        res.status(200).json({msg: "Data telah dihapus"});
+
+        // Check if the document was found and deleted
+        if (!response) {
+            return res.status(404).json({ message: 'Data tidak ditemukan' });
+        }
+
+        res.status(200).json({ msg: "Data telah dihapus" });
     } catch (error) {
-        console.log(error);
+        console.error("Error deleting inventaris:", error.message);
+        res.status(500).send({ message: "Internal Server Error" });
     }
-}
+};
+
 
 

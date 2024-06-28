@@ -7,7 +7,7 @@ GET http://localhost:35555/inventaris/28442
 
 //hapus
 ###
-DELETE http://localhost:35555/inventaris/667db14cc1b2514b46cc094a
+DELETE http://localhost:35555/inventaris/667efa9b33a7cf23d1d7c6c6
 
 //tambah
 ###
