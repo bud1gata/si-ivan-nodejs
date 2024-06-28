@@ -3,7 +3,7 @@ GET http://localhost:35555/inventaris
 
 //cari
 ###
-GET http://localhost:35555/inventaris/12224
+GET http://localhost:35555/inventaris/28442
 
 //hapus
 ###
@@ -15,12 +15,12 @@ POST http://localhost:35555/inventaris/
 Content-Type: application/json
 
 {
-    "nama": "mobil",
-    "merk": "mainan", 
-    "kondisi": "rusak", 
-    "tempat": "Lab 2", 
-    "tanggalBeli": "123123", 
-    "serialnumber": "595955",
+    "nama": "komputer",
+    "merk": "apple", 
+    "kondisi": "baik", 
+    "tempat": "Lab 3", 
+    "tanggalBeli": "1848444", 
+    "serialnumber": "28442",
     "diperoleh": "RKAS", 
     "status": "ada"
 }

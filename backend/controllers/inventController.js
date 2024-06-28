@@ -68,14 +68,54 @@ export const updateInventaris = async (req, res) => {
 
 
 //Tambah data
-export const createInventaris = async(req, res) => {
+export const createInventaris = async (req, res) => {
     try {
-        const response = await Inventaris.create(req.body);
-        res.status(201).json({msg: "Data baru ditambahkan"});
+        const {
+            nama,
+            merk,
+            kondisi,
+            tempat,
+            tanggalBeli,
+            serialnumber,
+            diperoleh,
+            status
+        } = req.body;
+
+        // Validate required fields
+        if (
+            !nama || nama.trim() === '' ||
+            !merk || merk.trim() === '' ||
+            !kondisi || kondisi.trim() === '' ||
+            !tempat || tempat.trim() === '' ||
+            !tanggalBeli || tanggalBeli.trim() === '' ||
+            !serialnumber || serialnumber.trim() === '' ||
+            !diperoleh || diperoleh.trim() === '' ||
+            !status || status.trim() === ''
+        ) {
+            return res.status(400).send({
+                message: 'Mohon masukkan data secara lengkap!',
+            });
+        }
+
+        // Create new Inventaris
+        const response = await Inventaris.create({
+            nama: nama.trim(),
+            merk: merk.trim(),
+            kondisi: kondisi.trim(),
+            tempat: tempat.trim(),
+            tanggalBeli: tanggalBeli.trim(),
+            serialnumber: serialnumber.trim(),
+            diperoleh: diperoleh.trim(),
+            status: status.trim()
+        });
+
+        res.status(201).json({ msg: "Data baru ditambahkan", data: response });
     } catch (error) {
-        console.log(error.messages);
+        console.error("Error creating inventaris:", error.message);
+        res.status(500).send({ message: "Internal Server Error" });
     }
-}
+};
+
 
 //hapus data
 export const deleteInventaris = async(req, res) => {
