@@ -7,4 +7,8 @@ Sistem aplikasi pencatatan inventaris sarana dan prasarana sekolah.
 * Mongoose
 * Mongodb
 
+Hapus by id
+find by serial
+edit by id
+
 Feel free to use guys.
